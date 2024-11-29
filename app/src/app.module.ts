@@ -14,7 +14,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: 'my-secret-pw',
       database: 'nest',
-      entities: [],
+      entities: [
+        /**
+         * entity file 입력, 정규 형태 혹은 객체로 삽입
+         * EX> '__dirname + '\/**\/*.entity{.ts,.js}'
+         */
+      ],
       synchronize: true,
     }),
   ],
