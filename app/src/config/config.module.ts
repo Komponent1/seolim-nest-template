@@ -6,9 +6,7 @@ import { ConfigService } from './config.service';
  * ConfigService는 환경변수를 로드하고, 이를 사용할 수 있는 메소드를 제공합니다.
  */
 @Module({
-  providers: [
-    { provide: ConfigService, useValue: ConfigService.LoadFromEnv() },
-  ],
+  providers: [{ provide: ConfigService, useValue: ConfigService.LoadFromEnv() }],
   exports: [ConfigService],
 })
 export class ConfigModule {}
